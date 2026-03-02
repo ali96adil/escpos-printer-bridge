@@ -1,0 +1,21 @@
+{
+  "name": "ESC/POS Printer Bridge",
+  "version": "1.0.0",
+  "slug": "escpos_printer_bridge",
+  "description": "Local bridge to print to ESC/POS printer over TCP (port 9100)",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "ports": {
+    "8099/tcp": 8099
+  },
+  "options": {
+    "printer_ip": "192.168.3.147",
+    "printer_port": 9100
+  },
+  "schema": {
+    "printer_ip": "str",
+    "printer_port": "int"
+  },
+  "arch": ["aarch64", "armv7", "armhf", "amd64", "i386"]
+}
